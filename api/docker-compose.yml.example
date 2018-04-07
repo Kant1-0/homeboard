@@ -1,0 +1,12 @@
+version: '2'
+services:
+  crm-db:
+    image: postgres:9.6
+    restart: always
+    container_name: homeboard-db
+    environment:
+      POSTGRES_DB: _
+      POSTGRES_USER: _
+      POSTGRES_PASSWORD: _
+    ports:
+      - 5430:5432/tcp
