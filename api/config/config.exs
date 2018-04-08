@@ -10,17 +10,17 @@ config :homeboard,
   ecto_repos: [Homeboard.Repo]
 
 # Configures the endpoint
-config :homeboard, Homeboard.Endpoint,
+config :homeboard, HomeboardWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "A0EyYJj3A6VikjL5TJW0kYFq7PfmLVpqutzmwqzr3YIIld6e8wEvr14cupuP58qc",
-  render_errors: [view: Homeboard.ErrorView, accepts: ~w(json)],
+  secret_key_base: "2ubdr9+lE8wkZvAEiCd8xIJmnMZgzxFCjQCFM0CPCS84I5KztMkMVnUuLNgYdYRO",
+  render_errors: [view: HomeboardWeb.ErrorView, accepts: ~w(json)],
   pubsub: [name: Homeboard.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
-  metadata: [:request_id]
+  metadata: [:user_id]
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
