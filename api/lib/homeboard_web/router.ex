@@ -7,5 +7,6 @@ defmodule HomeboardWeb.Router do
 
   scope "/api", HomeboardWeb do
     pipe_through :api
+    resources "/users", UserController, except: [:new, :edit]
   end
 end
